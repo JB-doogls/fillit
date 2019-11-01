@@ -6,13 +6,13 @@
 /*   By: jbdoogls <jbdoogls@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/31 14:49:10 by edoll             #+#    #+#             */
-/*   Updated: 2019/11/01 10:23:01 by jbdoogls         ###   ########.fr       */
+/*   Updated: 2019/11/01 11:04:41 by jbdoogls         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int ft_solving(t_fil list)
+int ft_solving(t_fil *list)
 {
     char **map;
     int j;
@@ -70,9 +70,35 @@ char    **ft_make_map(char **map, map_size)
     return (*map);
 }
 
-int ft_backtrack_algo(map, list, map_size)
+char **ft_backtrack_algo(map, t_fil *list, map_size)
 {
     int x;
     int y;
     
+    y = 0;
+    while (y < z)
+    {
+        x = 0;
+        while (x < z)
+        {
+            if (ft_check_space_for_shape(list, x, y, map_size))
+            {
+                // ft_put_shape(.....);                                        // ADD SHAPE_LETTER IN PARAMS !!! //
+                if (list->next && ft_backtrack_algo(map, list, map_size))
+                    return (map);
+                if (!list->next)
+                    ft_put_shape(......);
+                else
+                {
+                    ft_del_shape
+                }
+                
+                    
+            }
+            x++;
+        }
+    }
+    return (NULL);
 }
+
+int ft_check_space_for_shape(t_fil *list,)
