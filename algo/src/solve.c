@@ -30,7 +30,7 @@ int     ft_solving(t_tetri *list)
         if (!(map = ft_make_map(map, map_size++))
             retrun (-1);
     
-    j = 0;                          // <-- it seems we can impliment the uotput function here //
+    j = 0;                          // <-- it seems we can impliment the output function here //
     while (map[j])                
     {
         ft_putstr(map[j]);
@@ -78,7 +78,7 @@ char    **ft_make_map(char **map, int map_size)
 
 /*
 **  recursive algorithm for solving the issue 
-**      this is prototype - without a tool for delete incorrect turn of shape puting and nessesuary return-values the same     
+**      this is a prototype - without a tool for delete incorrect turn of shape puting and nessesuary return-values the same     
 */
 
 char    **ft_backtrack_algo(char **map, t_tetri *list, int map_size)
