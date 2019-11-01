@@ -20,7 +20,7 @@ int     ft_solving(t_tetri *list)
 {
     char **map;
     int j;
-    int map_size;           // for now size is defined if .h as 2 (2x2 square)
+    int map_size;           // for now size is defined in .h as 2 (2x2 square)
                             //  I plane to make a func. to find min_size value later
     
     map_size = MIN_SQ_SIZE;
