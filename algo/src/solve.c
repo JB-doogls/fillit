@@ -13,14 +13,14 @@
 #include "../includes/fillit.h"
 
 /*
-**  solving algorithm control module
+**  algorithm control module
 */
 
 int     ft_solving(t_tetri *list)
 {
     char **map;
     int j;
-    int map_size;           // for now size is defined as 2 (2x2 square)
+    int map_size;           // for now size is defined if .h as 2 (2x2 square)
                             //  I plane to make a func. to find min_size value later
     
     map_size = MIN_SQ_SIZE;
@@ -40,7 +40,7 @@ int     ft_solving(t_tetri *list)
 }
 
 /*
-**  function to create and increase the map for arrange shapes
+**  function to create and increase a map for arrange the shapes
 */
 
 char    **ft_make_map(char **map, int map_size)
@@ -110,16 +110,14 @@ char    **ft_backtrack_algo(char **map, t_tetri *list, int map_size)
                 
                     
             }
-            x++;
         }
-        y++;
     }
     return (NULL);
 }
 
 /*
-**  check map from current specific point (x,y) on possibility to put the shape following it's coordinates in t_tetri
-**  the first condition is about to validate the directly point we stand in
+**  check the map in current specific point (x,y) for possibility to put the current shape following it's coordinates in t_tetri
+**  the first condition is about to validate the point we directly standing in
 */
 
 int     ft_check_space_for_shape(t_tetri *lt, char **map, int x, int y, int map_size)
@@ -138,7 +136,7 @@ int     ft_check_space_for_shape(t_tetri *lt, char **map, int x, int y, int map_
 }
 
 /*
-**  here is small function to put she shape following it's coordinate after succes all checkings
+**  here is small function to put the shape following it's coordinate after succes all checkings
 */
 
 void    ft_put_shape(t_tetri *lt, char **map)
