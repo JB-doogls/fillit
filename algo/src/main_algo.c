@@ -22,8 +22,10 @@ int 	main()
 	t_tetri *node;
 	t_tetri *head;
 	int test_shapes[4][8] = {
-		{0, 0, 0, 1, 1, 0, 1, 1}, {0, 0, 1, 0, 2, 0, 3, 0},
-		{0, 0, 0, 1, 0, 2, 0, 3}, {0, 0, 0, 1, 1, 0, 2, 0}};
+		{0, 0, 0, 1, 1, 0, 1, 1},		// shape[0] - kvadrat
+		{0, 0, 1, 0, 2, 0, 3, 0},		// shape[1] - palka_vniz
+		{0, 0, 0, 1, 0, 2, 0, 3},		// shape[2] - palka_vbok
+		{0, 0, 0, 1, 1, 0, 2, 0}};		// shape[3] - lowadyu_hodi_pravo_verx
 	int i = 0;
 	int j = 0;
 
@@ -97,18 +99,30 @@ int 	main()
 
 
 
+/*
+*************************************************
+*//*
 
+shape[0] - kvadrat
 
-	// xx		0, 0, 0, 1, 1, 0, 1, 1
-	// xx
+	xx		0, 0, 0, 1, 1, 0, 1, 1
+	xx
+
+shape[1] - palka_vniz
+
+	x		0, 0, 1, 0, 2, 0, 3, 0
+	x
+	x
+	x			
+
+shape[2] - palka_vbok
+
+	xxxx		0, 0, 0, 1, 0, 2, 0, 3
+
+shape[3] - lowadyu_hodi_pravo_verx
 	
-	// x		0, 0, 1, 0, 2, 0, 3, 0
-	// x
-	// x
-	// x			
-	
-	// xxxx		0, 0, 0, 1, 0, 2, 0, 3
-	
-	// xx		0, 0, 0, 1, 1, 0, 2, 0
-	// x
-	// x
+	xx		0, 0, 0, 1, 1, 0, 2, 0
+	x
+	x
+
+*/
