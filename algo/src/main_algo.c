@@ -77,7 +77,7 @@ int 	main()
 		return (-1);
 	}
 
-// unlock to check head node
+// unlock to check and print head node
 /*
 	printf("\ncheck head node\n");
 	printf("\thead->shape = {""%d,%d,%d,%d,%d,%d,%d,%d" "}\n", head->shape[0],
