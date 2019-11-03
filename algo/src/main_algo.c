@@ -76,6 +76,9 @@ int 	main()
 		printf("incorrect *head\n");
 		return (-1);
 	}
+
+// unlock to check head node
+/*
 	printf("\ncheck head node\n");
 	printf("\thead->shape = {""%d,%d,%d,%d,%d,%d,%d,%d" "}\n", head->shape[0],
 	head->shape[1], head->shape[2], head->shape[3], head->shape[4], head->shape[5],
@@ -87,6 +90,7 @@ int 	main()
 		printf("\t->next(2)->letter = ""%c\n", (head->next->next)->letter);
 		printf("\t->next(3)->letter = ""%c\n", (head->next->next->next)->letter);
 	}
+*/
 	return (0);
 }
 
